@@ -1,5 +1,11 @@
 # Overview
 
+Update #1
+1. Finish SigmaDSP code
+2. Finish Main PSoC code
+3. Update Python code that runs on Raspberry Pi
+4. Update Display PSoC code with implementation of SPI interface.
+    
 This whole thing started when I saw first time this [Beosound 9000](https://www.beoworld.org/prod_details.asp?pid=954) CD player designed and manufactured by Bang & Olufsen (BeO). At that time it looked amazingly, like some sort of spaceship (at least to me). 
 
 Moving forward, few years back I manage to buy this player! It was faulty and I spent some time learning peculiarities that BeO engineers introduced inside this unit. In the end, I manage to bring it back to life and it is now fully working, every day used unit. But during that process of working on this unit, something changed… I caught a bug for BeO audio equipment. I especially started to like products designed by BeO designer Jacob Jensen. If you are interested, have a look [here](https://jacobjensendesign.com/bo) and [here](https://www.bang-olufsen.com/en/story/jacob-jensen-design-icon). That gentleman described his own design philosophy as “different but not strange” and I agree with him 100%. 
@@ -48,7 +54,8 @@ For all of that I put simple protocol in place that main uP uses to control and 
 On RPi, there is a SAMBA server running. General everyday interaction with system (adding new files, adding/modifying radio stations) is done by simple copy/paste approach. There is also SSH interface open for debug stuff. RPi is equipped with two Wi-Fi cards (2.4GHz and 5GHz) as well as Ethernet port. Code can be found on github [here](https://github.com/beomodern/RPi_Python_code) 
 2.	Code for main uP
 Main uP code is responsible for system housekeeping. There is a collection of flowcharts that attempts to explain its functionality available on github [here](https://github.com/beomodern/Main_uP/blob/master/Main_uP_flowcharts.pdf) In general it maintains system state, reacts to push buttons and remote control commands as well as sent information to display module. It interacts with SigmaDSP, RPi, BT module and PSU module. It also monitors and decoded BeO DATALINK commands. The Main_uP.JPG shows hardware interface implemented in PSoC. There is a whole auto generated datasheet [here](https://github.com/beomodern/Main_uP/blob/master/Main_uP_code_datasheet.pdf) Code can be found on github [here](https://github.com/beomodern/Main_uP) 
-
+3.  SigmaDSP code:
+This code handles all audio routing properly from analog IOs as well as I2S ports and optical SPDIF interfaces.  Board boots from an on-board EEPROM. Control of SigmaDSP is done over SPI interface by uP. Code implements spectrum and signal analysers. Code can be found on github here.  
 
 
 In terms of what still needs to be done.
@@ -64,9 +71,7 @@ f.	another PSoC 4200 series to handle all above
 The idea here is to use the same physical housing as any other BeoSystem unit. Best candidate is housing from Beomaster as it does not have any cuts in front for CD or anything like that. I bought one of those in the past. It was broken and I assumed I’ll just use chassis from it. I manage to fix it easily enough and now I don’t have guts to brake it down just for chassis. Hunt for properly broken unit continues.  
 
 On software side:
-1.	SigmaDSP code:
-Write code to handle all audio routing properly (at the moment is simply in to out). Once written code should ended up in on-board EEPROM and be controlled by main uP over SPI interface. Control will include input selection and reading back status for spectrum and signal analyser display ideas. Frames for that code are on github [here](https://github.com/beomodern/SigmaDSP)
-2.	Display uP code.
+1.	Display uP code.
 Write code that will handle:
 -	parallel interfaces to 3 alphanumeric display modules. 
 -	interact with RTC and DCF77 modules and code clock operation with them. 
