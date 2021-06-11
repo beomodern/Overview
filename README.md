@@ -63,10 +63,10 @@ Main uP code is responsible for system housekeeping. There is a collection of fl
 This code handles all audio routing properly from analog IOs as well as I2S ports and optical SPDIF interfaces.  Board boots from an on-board EEPROM. Control of SigmaDSP is done over SPI interface by uP. Code implements spectrum and signal analysers. Code can be found on github [here](https://github.com/beomodern/SigmaDSP).  
 4.	Display uP code.
 Code handle:
-a.	parallel interfaces to 3 alphanumeric display modules. 
-b.	interact with RTC and DCF77 modules and code clock operation with them. 
-c.	interact over I2C interface with LED controller. 
-d.	monitoring of photoresistor and use its readings to control brightness of both alphanumeric and LEDs displays. 
+-	parallel interfaces to 3 alphanumeric display modules. 
+-	interact with RTC and DCF77 modules and code clock operation with them. 
+- interact over I2C interface with LED controller. 
+- monitoring of photoresistor and use its readings to control brightness of both alphanumeric and LEDs displays. 
 Display is a slaved and react to commands sent over SPI from main uP. Code can be found [here](https://github.com/beomodern/Display_uP)
 
 You can watch little YouTube clip about it [here](https://youtu.be/MFGvZFi11Zc)
