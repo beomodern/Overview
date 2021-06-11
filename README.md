@@ -7,6 +7,7 @@ Moving forward, few years back I manage to buy this player! It was faulty and I 
 One of his designs, which was BeO response to far-east stackable sound systems was called BeoSystem 6500 (more [here](https://beocentral.com/beosystem6500) and [here](https://www.beoworld.org/prod_details.asp?pid=687)). It’s beautifully simple interface with spectacularly looking remote controller really makes an impression on everyone. I bought one of those (faulty again) and brought it back to life as well. It is great but it is a system designed in late eighties. Tapes are no longer popular sound carriers. Records definitely have characters but system on its own needed upgrade with access to more recent audio features. Keep in mind that Bluetooth interface was not even thought about when this unit was manufactured. I decided to something about it. 
 
 Entering BeoModern concept. 
+
 First, name. 
 I was thinking about something that might work well with rest of the system. I talked with my wife what she thinks about it and she mention term “modern” I thought this is great. It would also be a tribute to exhibition that BeO held at NY MOMA in seventies displaying Jensen designs (more [here](https://www.moma.org/calendar/exhibitions/1786)). After that, BeoModern name was born.
 
